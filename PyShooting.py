@@ -70,13 +70,6 @@ def drawObject(obj, x, y):
     global gamePad #전역변수설정
     gamePad.blit(obj, (x, y))   #그림그리기
 
-        drawObject(rock, rockX, rockY) #운석그리기
-
-        pygame.display.update() #다시 그리기
-
-        clock.tick(60) #초당 60번
-
-    pygame.quit()
 
 def initGame(): #게임초기화
     global gamePad, clock, background, fighter, missile, explosion, missileSound, gameOverSound  #전역변수설정
