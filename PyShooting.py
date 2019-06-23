@@ -127,6 +127,12 @@ def runGame():
                 sys.exit()
 
             if event.type in [pygame.KEYDOWN]:
+                        
+                mods = pygame.key.get_mods()
+                if mods & pygame.KMOD_ALT and event.key == pygame.K_F4:
+                    pygame.quit()
+                    sys.exit()
+                        
                 if event.key == pygame.K_LEFT: #왼쪽으로 이동
                     fighterX -= 5 #왼쪽으로 5이동
 
